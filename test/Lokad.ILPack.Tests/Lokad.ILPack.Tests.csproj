@@ -8,6 +8,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\src\Lokad.ILPack.csproj" />
     <ProjectReference Include="..\TestSubject\TestSubject.csproj" />
+     <ProjectReference Include="..\ReferencedSubject\ReferencedSubject.csproj" />
   </ItemGroup>
 
   <ItemGroup>

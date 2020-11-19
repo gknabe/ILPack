@@ -7,6 +7,9 @@
 // SEE RewriteTest in Lokad.ILPack.Tests
 
 
+using System;
+using ReferencedSubject;
+
 namespace TestSubject
 {
     public partial class MyClass
@@ -25,6 +28,14 @@ namespace TestSubject
         {
             get;
             set;
+        }
+
+        public string FieldAccessOfReferencedType
+        {
+            get
+            {
+                return MyReferencedStaticClass<string>.Instance;
+            }
         }
 
         private int PrivateProperty

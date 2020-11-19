@@ -1,4 +1,5 @@
-﻿using Xunit;
+﻿using System;
+using Xunit;
 
 namespace Lokad.ILPack.Tests
 {
@@ -26,6 +27,14 @@ namespace Lokad.ILPack.Tests
             Assert.Equal(101, await Invoke(
                 "x.ReadWriteProperty = 101;",
                 "x.ReadWriteProperty"));
+        }
+
+        [Fact]
+        public async void StaticProperty()
+        {
+            Assert.Equal(default(string), await Invoke(
+                "",
+                "x.FieldAccessOfReferencedType"));
         }
     }
 }
